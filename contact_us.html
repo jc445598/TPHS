@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ABC School</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script>
+
+function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+    
+	<header>
+    	<section class="col-7 col-m-7 "></section>
+         <section class="col-3 col-m-3 " >
+ <!--<form method="get" action="/search" id="search">
+  <input name="q" type="text" size="20" placeholder="Search..." />
+</form> -->
+</section>
+      
+    </header>
+  
+    
+    <div class="nav"> 
+    <!--<section class="col-2 col-m-2 ">
+    <img src="SiteImages/TCMC98Neg.jpg" style="margin-right:auto;"/>
+    </section>	-->  
+<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1" onClick="nav_item_selected(1)">Events</button>
+<div class="dropdown-menu">
+ <a href="#" >Event-1</a>
+ <a href="#" >Event-2</a>
+ <a href="#" >Event-3</a>
+ <a href="#" >Event-4</a>
+ </div>
+ </div>
+
+<a href="artist_wassa.html" id="2" onClick="nav_item_selected(2)">Bulletin Board</a>
+
+
+<a href="artist_galary.html">Musos</a>
+<a href="#">Members</a>
+<a href="#">Sponsors</a>
+<div class="dropdown">
+<button class="dropbtn" id="5" onClick="nav_item_selected(5)">About Us</button>
+<div class="dropdown-menu">
+ <a href="about_us.html" >Brief History</a>
+ </div>
+ </div>
+<a href="contact_us.html">Contact Us</a>
+
+
+</div>
+
+ <div class="row " >
+ <section class="col-5 col-m-5 ">
+    </section>	
+    <section class="col-5 col-m-5 ">
+   	
+    <h1>--- Contact Us --- </h1>
+     </section>
+    <section class="col-5 col-m-5 ">
+    </section>	
+    </div>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+    </section>	
+    <section class="col-3 col-m-6 ">
+        <!--<figure>
+  <a href="#"><img src="musos/CelticFyre800.jpg" alt="The Pulpit Rock" >
+  <figcaption>CelticFyre</figcaption></a>
+</figure>-->
+<p><h3>Celtic Fyre</h3> 
+Based in Townsville, North Qld, the Music Centre presents concerts and workshops throughout the year, in a diverse range of genres including classical, jazz, folk, blues, world and contemporary music, featuring touring artists and locally-based professional and emerging artists.<br> 
+
+
+</p>
+    </section>
+     <section class="col-3 col-m-3 ">
+    </section>	
+    </div>
+   
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+    </section>	
+    <section class="col-3 col-m-6 ">
+       
+<p><h3>Civic Theatre</h3> 
+<ul>
+<h4>Contact Details:</h4>
+
+<li><h5>Phone:</h5><strong>  07 4724 2086</strong></li>
+<li><h5>Mobile:</h5><strong>  0402 255 182</strong></li>   
+
+<li><h5>Postal Address:</h5>  PO Box 1006, Townsville, Qld 4810
+Address  Townsville Civic Theatre, 41 Boundary Street, Townsville, Qld 4810
+email admin@townsvillemusic.org.au</li>
+</ul>
+<br> 
+</p>
+    </section>
+     <section class="col-3 col-m-3 ">
+    </section>	
+   </div>
+
+    <footer><h4>Design By TPHS - 2017</h4></footer>
+    </div>
+</body>
+</html>

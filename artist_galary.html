@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ABC School</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script>
+
+function run_first() {
+if(sessionStorage.item_id) {
+document.getElementById(sessionStorage.item_id.toString()).style.backgroundColor
+= "gray";
+}
+}
+function nav_item_selected(item_id) {
+for(i = 0; i < 6; i++) {
+document.getElementById(i.toString()).style.backgroundColor = "";
+}
+document.getElementById(item_id.toString()).style.backgroundColor = "gray";
+//store item_id in sessionStorage
+sessionStorage.item_id = item_id;
+}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+	<header>
+    	
+       
+    </header>
+     <div class="nav"> 
+    <!--<section class="col-2 col-m-2 ">
+    <img src="SiteImages/TCMC98Neg.jpg" style="margin-right:auto;"/>
+    </section>	-->  
+<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1" onClick="nav_item_selected(1)">Events</button>
+<div class="dropdown-menu">
+ <a href="#" >Event-1</a>
+ <a href="#" >Event-2</a>
+ <a href="#" >Event-3</a>
+ <a href="#" >Event-4</a>
+ </div>
+ </div>
+
+<a href="artist_wassa.html" id="2" onClick="nav_item_selected(2)">Bulletin Board</a>
+
+
+<a href="artist_galary.html">Musos</a>
+<a href="#">Members</a>
+<a href="#">Sponsors</a>
+<div class="dropdown">
+<button class="dropbtn" id="5" onClick="nav_item_selected(5)">About Us</button>
+<div class="dropdown-menu">
+ <a href="about_us.html" >Brief History</a>
+ </div>
+ </div>
+<a href="contact_us.html">Contact Us</a>
+
+
+</div>
+<div class="row " style="margin-bottom:10px;" >
+ <section class="col-5 col-m-5 ">
+    </section>	
+    <section class="col-5 col-m-5 ">
+   	
+    <h1>--- Artist --- </h1>
+     </section>
+    <section class="col-5 col-m-5 ">
+    </section>	
+    </div>
+  
+   
+    <div class="row">
+    <section class="col-4 col-m-4 " >
+    	
+        
+       <figure>
+  <a href="artist_wassa.html"><img src="musos/Wassa01.jpg" alt="The Pulpit Rock" height="100" width="100">
+  <figcaption>Wassa</figcaption></a>
+</figure>
+       
+    </section>
+    <section class="col-4 col-m-4 ">
+    	
+       <figure>
+  <a href="#artist_wassa.html"><img src="musos/Camerata.jpg" alt="The Pulpit Rock" height="100" width="100" >
+  <figcaption>Camerata</figcaption></a>
+</figure>
+    </section>
+    <section class="col-4 col-m-4 ">
+    	
+       <figure>
+  <a href="#artist_wassa.html"><img src="musos/AVIVA-LANE500.jpg" alt="The Pulpit Rock" height="100" width="100" >
+  <figcaption>AVIVA-LANE1</figcaption></a>
+</figure>
+    </section>
+    </div>
+    <div class="row">
+
+    <section class="col-4 col-m-4 ">
+    	
+        <figure>
+  <a href="#artist_wassa.html"><img src="musos/CelticFyre800.jpg" alt="The Pulpit Rock" height="100" width="100">
+  <figcaption>CelticFyre</figcaption></a>
+</figure>
+    </section>
+    <section class="col-4 col-m-4 ">
+    	
+        <figure>
+  <a href="#artist_wassa.html"><img src="musos/Poms.jpg" alt="The Pulpit Rock" height="100" width="100">
+  <figcaption>Poms</figcaption></a>
+</figure>
+    </section>
+    <section class="col-4 col-m-4 ">
+    	
+        <figure>
+  <a href="#artist_wassa.html"><img src="musos/DD600400.png" alt="The Pulpit Rock" height="100" width="100">
+  <figcaption>Rosewood01</figcaption></a>
+</figure>
+    </section>
+</div>
+<div class="row">
+
+    <section class="col-4 col-m-4 ">
+    	
+        <figure>
+  <a href="#artist_wassa.html"><img src="musos/SNBB1.jpg" alt="The Pulpit Rock" height="100" width="100">
+  <figcaption>SNBB1</figcaption></a>
+</figure>
+    </section>
+    <section class="col-4 col-m-4 ">
+    	
+        <figure>
+  <a href="#artist_wassa.html"><img src="musos/Stokes.jpg" alt="The Pulpit Rock" height="100" width="100">
+  <figcaption>Stokes</figcaption></a>
+</figure>
+    </section>
+    <section class="col-4 col-m-4 ">
+    	
+        <figure>
+  <a href="#artist_wassa.html"><img src="musos/TCBSaxLogo800.jpg" alt="The Pulpit Rock" height="100" width="100" >
+  <figcaption>TCBSaxLogo800</figcaption></a>
+</figure>
+    </section>
+</div>
+    <footer><h4>Design By TPHS - 2017</h4></footer>
+    </div>
+</body>
+</html>

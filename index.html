@@ -2,109 +2,307 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ABC School</title>
+<!--<link href="img.css" rel="stylesheet" type="text/css">-->
 <link href="styles.css" rel="stylesheet" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <script>
+<meta name="view<title>ABC School</title>
+port" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<style>
+.mySlides {display:none;}
+</style>
 
-function run_first() {
-if(sessionStorage.item_id) {
-document.getElementById(sessionStorage.item_id.toString()).style.backgroundColor
-= "gray";
-}
-}
-function nav_item_selected(item_id) {
-for(i = 0; i < 6; i++) {
-document.getElementById(i.toString()).style.backgroundColor = "";
-}
-document.getElementById(item_id.toString()).style.backgroundColor = "gray";
-//store item_id in sessionStorage
-sessionStorage.item_id = item_id;
-}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+ $(document).ready(function()
+{
+    $("#flip").click(function(){
+         $("#panel").slideToggle("slow");
+    });
+	$("#panel").click(function(){
+		 $("#panel").slideToggle("slow");
+		});
+});
+
+ </script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+	$("#panel1").click(function(){
+		$("#panel1").slideToggle("slow");
+		});
+});
+</script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip2").mouseover(function(){
+        $("#panel2").slideDown("slow");
+    });
+	$("#panel2").mouseout(function(){
+		$("#pane2").slideUp("slow");
+		});
+});
+</script>
+
+
+ <script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
 </script>
 
 </head>
 
 <body onload="run_first()"> 
 	<div id="wrapper">
-	<header>
-    	<h1>ABC School</h1>
-       
+	<header>      
     </header>
+    <div class="row">
+    
     <div class="nav"> 
-    <!--<section class="col-2 col-m-2 ">
-    <img src="SiteImages/TCMC98Neg.jpg" style="margin-right:auto;"/>
-    </section>	-->  
-<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+
+ <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
 
  <div class="dropdown">
 
-<button class="dropbtn" id="1" onClick="nav_item_selected(1)">Events</button>
-<div class="dropdown-menu">
- <a href="#" >Event-1</a>
- <a href="#" >Event-2</a>
- <a href="#" >Event-3</a>
- <a href="#" >Event-4</a>
- </div>
- </div>
-
-<a href="artist_wassa.html" id="2" onClick="nav_item_selected(2)">Bulletin Board</a>
-
-
-<a href="artist_galary.html">Musos</a>
-<a href="#">Members</a>
-<a href="#">Sponsors</a>
+<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-menu">
+					<a href="event1.html" onClick="nav_item_selected(1)">Current Events</a>
+					<a href="pastevent.html" onClick="nav_item_selected(1)">History Event</a>	
+				</div>
+			</div>
 <div class="dropdown">
-<button class="dropbtn" id="5" onClick="nav_item_selected(5)">About Us</button>
-<div class="dropdown-menu">
- <a href="about_us.html" >Brief History</a>
- </div>
- </div>
-<a href="contact_us.html">Contact Us</a>
+				<button class="dropbtn" id="2">Bulletin Broad</button>
+				<div class="dropdown-menu">
+					<a href="bulletn.html" onClick="nav_item_selected(2)">Post a New one</a>
+						
+				</div>
+			</div>
+ 
+<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-menu">
+					<a href="artist_galary.html" onClick="nav_item_selected(3)">Artists</a>
+					
+				</div>
+			</div>
 
+<div class="dropdown">
+				<button class="dropbtn" id="4">Membership</button>
+				<div class="dropdown-menu">
+					<a href="member.html" onClick="nav_item_selected(4)">Join Us</a>	
+				
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-menu">
+                <a href="about_us.html" onClick="nav_item_selected(5)">Brief History</a>
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="sponsors.html" onClick="nav_item_selected(5)">Sponsors</a>
+				</div>
+			</div>
+             <a href="Feedback.html" id="6" onClick="nav_item_selected(6)">Feedback</a>
+          <a href="sign_up.html" id="7" onClick="nav_item_selected(7)">Sign-Up</a>
+</div>
 
 </div>
- <div class="row " >
+ 
+      
+   <div class="row">
+ 
+    	<section class="col-3 col-m-3" >
+       
+      <img src="SiteImages/30anniversary02300.png"/>
+        
+       </section>
+     
+    <section class="col-6 col-m-6" >
+    	    
+
+<div class="w3-content w3-section"  style="max-width:500px;">
+  <img class="mySlides w3-animate-fading" src="musos/Wassa01.jpg" style="width:100%"/>
+  <img class="mySlides w3-animate-fading" src="musos/Camerata.jpg" style="width:100%"/>
+</div>
+<hr class="style15">
+</section>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 7000); // Change image every 2 seconds
+}
+</script>
+<section class="col-3 col-m-3" >
+<img src="events/FOTT.gif" style="width:120px;height:300px;float:left;"/>
+ <ul >
+  <li style="display:block;font-size:16px;margin-left:40px; margin-top:10px;"><a href="docs/Membership-2015.doc"><button class="button button1">Click here to download the Membership Form</button></a> </li>
+   </ul>
+<!--<marquee behavior="scroll" direction="up">
+<img src="SiteImages/QG.Gif" width="80" height="80" alt="Natural" />
+<br>
+<img src="SiteImages/TCC83100.png" width="80" height="80" alt="Natural" />
+<br>
+<img src="SiteImages/Qldlogo150200.png" width="80" height="80" alt="Natural" />
+<br>
+</marquee>-->
+</section>
+</div>
+
+    
+     <div class="row">
+      <section class="col-6 col-m-6 ">
+      <img src="Siteimages/CivicFront500.jpg"/>
+    </section>	
+     <section class="col-6 col-m-6 ">
+     <h2 style="color:green;">Are you new to Townsville..?</h2>
+     
+     <p style="font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;margin:5px;text-align:justify;font-size:20px;color:black;border: 20px solid transparent;
+    border-radius: 15px;
+	 border-image: url(Siteimages/PNG-HD.png) 10% round; background-image:url(Siteimages/CivicFront200.gif);">
+     Townsville Community Music Centre is a not-for-profit, incorporated organisation serving musicians and their audience in North Queensland. The Music Centre's role includes facilitation, presentation and promotion of events, functions, education, workshops, concerts, festivals in Townsville, and surrounding centres. 
+Based in Townsville, North Qeensland, thiss Music Centre presents workshops and concerts around the year, in a diverse range of genres including folk, jazz, classical, blues, world and contemporary music, featuring touring artists and locally-based professional and emerging artists.
+     </p>
+    </section>	
+              
+    </div>
+   
+    <div class="row " >
  <section class="col-3 col-m-3 ">
+ <!--<a href="#"><strong>Performance opportunities 
+available throughout 2017 
+for local musicians and organisations.</strong></a>-->
+   <ul >
+  <li style="display:block;font-size:16px;margin-left:40px;pedding:5px;border-left:2px double green;border-right:2px double green;"><a href="bulletn.html" ><button class="button button1">Find out</button></a> </li><br>
+   <li style="display:block;font-size:16px;margin-left:40px;border-left:2px double green;border-right:2px double green;"><a href="volunteer.html" ><button class="button button1">Volunteers</button></a> </li><br>
+   <li style="display:block;font-size:16px;margin-left:40px;border-left:2px double green;border-right:2px double green;"><a href="feedback.html" ><button class="button button1">Please give us Feedback</button></a> </li><br>
+   
+   </ul>
+
     </section>	
     <section class="col-6 col-m-6 ">
-   	
-    <h1> The Townsville Community Music Centre celebrated its 30th year in 2013.</h1>
+   	  	    <marquee behavior="alternate" direction="left"><h2 style="color:green;">Upcoming-Events</h2></marquee>
+
+
+
+<div class="row">
+ 
+
+<section id="flip" style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;"><ul >
+  <li style="display:block;font-size:16px;margin-left:-10px;"><marquee scrollamount="3" width="20"><img src="randomImages/horn.png"/></marquee>SUNDAY VARIETY CONCERT<marquee scrollamount="3" direction="right" width="20"><img src="randomImages/horn.png"/></marquee></li></ul></section>
+
+<section id="panel">
+<ul style="list-style:none; text-align:justify;">
+<li><strong>Event Name:</strong>&nbsp&nbsp <strong>SUNDAY VARIETY CONCERT</strong></li><br>
+ <li style="color:green;"><strong>Presented By:</strong>&nbsp&nbsp Friends of the Theatre </li><br>
+ <li><strong>venue:</strong>&nbsp&nbsp 2pm Sunday 25 June at Pimlico Performing Arts Centre Fulham Road </li><br>
+<li><strong>Enquiries :</strong>&nbsp&nbsp please phone 4723 7879 </li>
+</ul>
+
+</section> 
+ </div>
+ 
+  <div class="row">
+  
+<section id="flip1" style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;">
+<ul >
+  <li style="display:block;font-size:16px;margin-left:-10px;"><marquee scrollamount="3" width="20"><img src="randomImages/horn.png"/></marquee>Townsville Guitar Orchestra<marquee scrollamount="3" direction="right" width="20"><img src="randomImages/horn.png"/></marquee></li></ul></section>
+
+<section id="panel1">
+<ul style="list-style:none; text-align:justify;">
+<li><strong>Event Name:</strong>&nbsp&nbsp <strong>Townsville Guitar Orchestra</strong></li><br>
+ <li style="color:green;"><strong>Presented By:</strong>&nbsp&nbsp Special guest Paul Svoboda </li><br>
+ <li><strong>venue:</strong>&nbsp&nbsp 2pm Sunday 25 July at the Carlton Theatre (Carlyle Gardens) </li><br>
+<li><strong>Enquiries :</strong>&nbsp&nbsp please phone 0402 255 182 
+ </li>
+</ul></section> 
+ </div>
+ <hr class="style15">
      </section>
+   
+
     <section class="col-3 col-m-3 ">
     </section>	
     </div>
-      
-    <div class="row">
-    <section class="col-3 " id="header">
-    	
-        <p>
-        <img src="SiteImages/30anniversary02300.png">
-       
-        </p>
+    
+   
+    
+    <footer>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+	<p><strong><i>Address:</i></strong><br>
+	<strong >Townsville Civic Theatre<br>
+41 Boundary Street,<br>
+Townsville
+P.O. Box 1006<br>
+Townsville 4810</strong></p>
+    </section>	
+    <section class="col-3 col-m-3 ">
+	<ul>
+    <li><strong >Phone (07) 4724 2086</strong ></li>
+<li><strong >Mobile 0402 255 182</strong ></li>
+<li><strong >Email admin@townsvillemusic.org.au</strong ></li>
+<li><strong >Website www.townsvillemusic.org.au</strong ></li>
+<li><strong >ABN: 35 039 662 787</strong ></li>
+<li><strong >Not GST Registered</strong ></li>
+</ul>
     </section>
-    <section class="col-6">
-    	
-        <p>
-        The Townsville Community Music Centre celebrated its 30th year in 2013. 
-
-It has been constantly changing over the years to keep up to date with the musical tastes and needs of the Townsville community. As part of the relocation of the Music Centre to the Civic Theatre, Bronia Renison and Jean Dartnall, both librarians, have assessed the old collection of sheet music, books and recorded music which the centre has been storing, unused, for many years. Sometimes older things have to be discarded to make way for the new, but the Music Centre is aware that older material may still have value. 
-The National Library of Australia has an online catalogue (TROVE) that lists not only its own holdings but also information about items held by many other libraries around Australia. Using this catalogue Bronia and Jean have identified at least 150 items of music that are not held by any of the country's major libraries. These items have been donated to the National Library to include in their collection and thus made available to all historians and musicians.
-
-Also discovered in the old collection were some pieces relevant to North Queensland. Local musicians performed these at a musical social afternoon on Sunday April 21st in C2 at the Civic Theatre. The remaining sheet music, books and CDs were put on display and distributed free of charge to the local music community.
-
-
-
-        </p>
-    </section>
-    <section class="col-3">
-    	
-        <p>
-       <img src="musos/TCBSaxLogo800.jpg">
-        </p>
-    </section>
-    </div>
-    <footer><h4>Design By TPHS - 2017</h4></footer>
+    <section class="col-3 col-m-3 ">
+   
+    <ul style="list-style:none;margin-left:50px;">
+     <li><strong>Follow Us</strong></li>
+    <li><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/ii.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/gg.png.png" style="width:30px;height:30px;"/>  </a></li>
+    <li><a href="#"><img src="SiteImages/ttt.png.png" style="width:30px;height:30px;"/>  </a></li>
+    </ul>
+     </section>
+     <section class="col-3 col-m-3 ">
+     <strong>Normal office hours <br> 
+9.30 -2.30 Monday - Wednesday<br>
+Any other time just call 0402 255 182 </strong>
+	 
+    </section>	
+   </div>
+   <div class="row " >
+   <hr class="style15">
+	<h4>Design By 007 - 2017</h4>
+	
+	</div>
+    </footer>
     </div>
 </body>
 </html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link href="img.css" rel="stylesheet" type="text/css">-->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="view<title>ABC School</title>
+port" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<style>
+.mySlides {display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+ $(document).ready(function()
+{
+    $("#flip").click(function(){
+         $("#panel").slideToggle("slow");
+    });
+	$("#panel").click(function(){
+		 $("#panel").slideToggle("slow");
+		});
+});
+
+ </script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+	$("#panel1").click(function(){
+		$("#panel1").slideToggle("slow");
+		});
+});
+</script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip2").mouseover(function(){
+        $("#panel2").slideDown("slow");
+    });
+	$("#panel2").mouseout(function(){
+		$("#pane2").slideUp("slow");
+		});
+});
+</script>
+
+
+ <script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+	<header>      
+    </header>
+    <div class="row">
+    
+    <div class="nav"> 
+
+
+ <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-menu">
+					<a href="event1.html" onClick="nav_item_selected(1)">Current Events</a>
+					<a href="pastevent.html" onClick="nav_item_selected(1)">History Event</a>	
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Broad</button>
+				<div class="dropdown-menu">
+					<a href="bulletn.html" onClick="nav_item_selected(2)">Post a New one</a>
+						
+				</div>
+			</div>
+ 
+<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-menu">
+					<a href="artist_galary.html" onClick="nav_item_selected(3)">Artists</a>
+					
+				</div>
+			</div>
+
+<div class="dropdown">
+				<button class="dropbtn" id="4">Membership</button>
+				<div class="dropdown-menu">
+					<a href="member.html" onClick="nav_item_selected(4)">Join Us</a>	
+				
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-menu">
+                <a href="about_us.html" onClick="nav_item_selected(5)">Brief History</a>
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="sponsors.html" onClick="nav_item_selected(5)">Sponsors</a>
+				</div>
+			</div>
+             <a href="Feedback.html" id="6" onClick="nav_item_selected(6)">Feedback</a>
+          <a href="sign_up.html" id="7" onClick="nav_item_selected(7)">Sign-Up</a>
+</div>
+
+</div>
+ <div class="row " >
+ <section class="col-5 col-m-5 ">
+    </section>	
+    <section class="col-5 col-m-5 ">
+   	
+    <h1>--- Memebership Form --- </h1>
+   <a href="docs/Membership-2015.doc"><button class="button button1">Click here to download the Membership Form</button></a>
+     </section>
+    <section class="col-5 col-m-5 ">
+    </section>	
+    </div>
+        <div class="row " >
+    
+    <section class="col-3 col-m-3 ">
+    </section>	
+    <section class="col-6 col-m-6 ">
+    <script>		
+			function checkRePassword(document) {	
+			  var pwd = document.getElementById("password");
+			  var pwd_msg = document.getElementById('pwd_msg');
+			  var repwd = document.getElementById("rePassword");	  
+			  if (pwd.value != repwd.value) {
+				pwd_msg.innerHTML = "The two passwords are not the same.";
+				repwd.value = "";
+				pwd.focus();
+				return false;
+			  }
+			  else {
+				pwd_msg.innerHTML = "";  
+			  }  
+			  return true;
+			}	
+
+			function checkZIPCode(document) {
+			  var zip = document.getElementById("zip");
+			  var zip_msg = document.getElementById("zip_msg");
+			  var isNum = /^[0-9]{4}$/.test(zip.value); // 4 digits
+			  if(!isNum) {
+				zip_msg.innerHTML = "4 digits are required.";
+				zip.focus();
+				return false;
+			  }
+			  else {
+				zip_msg.innerHTML = "";  
+			  }  
+			  return true;		
+			}
+
+			function validateInfo(document) { 
+			  if ( checkRePassword(document) && checkZIPCode(document) )
+			  { 
+				return true;
+			  }
+			  return false;
+			}
+
+			function changeYellowColor(id) {
+				document.getElementById(id).style.backgroundColor = "yellow";
+			}
+
+			function changeWhiteColor(id) {
+				document.getElementById(id).style.backgroundColor = "white";
+			}
+		</script>
+		
+	
+			<h2>Please enter your details below for Sign up</h2>
+			<p><i>Fields marked with an asterisk (*) must be entered.</i></p>
+			<form action="" method="post">
+				<div class="row">
+					<div class="col">
+						<label for="name">* Name:</label>
+						<input type="text" id="name" size="15" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="email">* Email:</label>
+						<input type="email" id="email" size="15" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="password">* Password:</label>
+						<input type="password" id="password" size="15" maxlength="20" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required/>
+					</div>
+					<div class="col pwd_msg" id="pwd_msg" style="color:red;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="repassword">* Re-try:</label>
+						<input type="password" id="rePassword" size="15" maxlength="20" 
+								onChange="checkRePassword(document)" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="zip">* Postcode:</label>
+						<input type="text" id="zip" size="10" maxlength="10" placeholder="4 digits" 
+								onChange="checkZIPCode(document)" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" />
+					</div>
+					<div class="col zip_msg" id="zip_msg" style="color:red;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label>&nbsp;</label>
+						<input type="submit" id="submit" value="Submit" onClick="return validateInfo(document)" />
+						<input type="reset" id="reset" value="Clear Form"/>
+					</div>
+				</div>
+			</form>
+   
+    <input type="checkbox" checked="checked"> Remember me
+    
+    <div class="clearfix">
+      
+      <button type="submit" class="signupbtn" value="Submit" onClick="return validateInfo(document)" >Sign Up</button>
+      
+
+
+     
+     
+   
+    </div>
+     </section>
+     <section class="col-3 col-m-3 ">
+    </section>	
+    </div>
+   
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+    </section>	
+    <section class="col-3 col-m-6 ">
+    </section>
+     <section class="col-3 col-m-3 ">
+    </section>	
+   </div>
+
+    <footer>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+	<p><strong><i>Address:</i></strong><br>
+	<strong >Townsville Civic Theatre<br>
+41 Boundary Street,<br>
+Townsville
+P.O. Box 1006<br>
+Townsville 4810</strong></p>
+    </section>	
+    <section class="col-3 col-m-3 ">
+	<ul>
+    <li><strong >Phone (07) 4724 2086</strong ></li>
+<li><strong >Mobile 0402 255 182</strong ></li>
+<li><strong >Email admin@townsvillemusic.org.au</strong ></li>
+<li><strong >Website www.townsvillemusic.org.au</strong ></li>
+<li><strong >ABN: 35 039 662 787</strong ></li>
+<li><strong >Not GST Registered</strong ></li>
+</ul>
+    </section>
+    <section class="col-3 col-m-3 ">
+     
+    <ul style="list-style:none;margin-left:50px;">
+    <li><strong>Follow Us</strong></li>
+    <li><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/ii.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/gg.png.png" style="width:30px;height:30px;"/>  </a></li>
+    <li><a href="#"><img src="SiteImages/ttt.png.png" style="width:30px;height:30px;"/>  </a></li>
+    </ul>
+     </section>
+     <section class="col-3 col-m-3 ">
+     <strong>Normal office hours <br> 
+9.30 -2.30 Monday - Wednesday<br>
+Any other time just call 0402 255 182 </strong>
+	 
+    </section>	
+   </div>
+   <div class="row " >
+   <hr class="style15">
+	<h4>Design By 007 - 2017</h4>
+	
+	</div>
+    </footer>
+    </div>
+</body>
+</html>

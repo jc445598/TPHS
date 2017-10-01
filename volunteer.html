@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link href="img.css" rel="stylesheet" type="text/css">-->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="view<title>ABC School</title>
+port" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<style>
+.mySlides {display:none;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+ <script>
+$(document).ready(function()
+{
+    $("#flip").click(function(){
+         $("#panel").slideToggle("slow");
+    });
+	$("#panel").click(function(){
+		 $("#panel").slideToggle("slow");
+		});
+});
+
+ </script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+	$("#panel1").click(function(){
+		$("#panel1").slideToggle("slow");
+		});
+});
+</script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip2").click(function(){
+         $("#panel2").slideToggle("slow");
+    });
+	$("#panel2").click(function(){
+		 $("#panel2").slideToggle("slow");
+		});
+});
+</script>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 7000); // Change image every 2 seconds
+}
+</script>
+
+ <script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+	<header>      
+    </header>
+    <div class="row">
+    
+    <div class="nav"> 
+    <!--<section class="col-2 col-m-2 ">
+    <img src="SiteImages/TCMC98Neg.jpg" style="margin-right:auto;"/>
+    </section>	-->  
+<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-menu">
+					<a href="#" onClick="nav_item_selected(1)">Current Events</a>
+					<a href="#" onClick="nav_item_selected(1)">History Event</a>	
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Broad</button>
+				<div class="dropdown-menu">
+					<a href="#" onClick="nav_item_selected(2)">Post a New one</a>
+					<a href="#" onClick="nav_item_selected(2)">Open Broad</a>	
+				</div>
+			</div>
+ 
+<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-menu">
+					<a href="artist_galary.html" onClick="nav_item_selected(3)">Artists</a>
+					<a href="#" onClick="nav_item_selected(3)">Make your own Band</a>
+				</div>
+			</div>
+
+<div class="dropdown">
+				<button class="dropbtn" id="4">Membership</button>
+				<div class="dropdown-menu">
+					<a href="#" onClick="nav_item_selected(4)">Join Us</a>	
+					<a href="#" onClick="nav_item_selected(4)">Membership Details</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-menu">
+                <a href="about_us.html" onClick="nav_item_selected(5)">Brief History</a>
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="#" onClick="nav_item_selected(5)">Our Centre</a>
+					<a href="#" onClick="nav_item_selected(5)">Support Us</a>
+				</div>
+			</div>
+            <a href="login.html" id="6" onClick="nav_item_selected(6)">Login</a>
+            <a href="sign_up.html" id="7" onClick="nav_item_selected(7)">Sign-Up</a>
+</div>
+
+</div>
+ 
+      
+    
+    <div class="row " >
+    <section class="col-1 col-m-1 "> </section>
+
+
+<section class="col-9 col-m-9 ">
+<section id="flip" style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;"><strong>Volunteer Singers / Musicians: </strong></section>
+    
+<section id="panel"><p style="margin-left:0px;text-align:justify;font-size:20px;color:green;border: 20px solid transparent;
+    border-radius: 15px;
+	 border-image: url(Siteimages/PNG-HD.png) 10% round; background-image:url(Siteimages/Parchment.jpg);">
+     <img src="bulletin/TCBshirt.png"  style="width:170px;height:170px;float:left;"/> The Townsville Concert Band encourages musicians to experience playing in a serious orchestra. 
+Do you play clarinet, flute, oboe or bassoon? French horn? Electric bass? Trombone? 
+Improve your skills in a friendly environment and take part in some major musical events! 
+This is a local community band who meet once a week for rehearsals, with some serious concerts planned throughout the year. The band plays a range of different styles of concert band music, ranging from classical to musical theatre and modern pop. 
+All levels and ages are welcome.<br>
+<strong>for more information please call Merle Trembath:<i> 0418882633</i> </strong><br>
+<b>See our Facebook page </b><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/></a>
+</p></section>
+
+</section>
+</div>
+<div class="row">
+<section class="col-1 col-m-1 "> </section>
+
+
+<section class="col-9 col-m-9 ">
+<section id="flip1" style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;"><strong>VIOLIN TUTOR: </strong></section>
+    
+<section id="panel1"><p style="margin-left:0px;text-align:justify;font-size:20px;color:green;border: 20px solid transparent;
+    border-radius: 15px;
+	 border-image: url(Siteimages/PNG-HD.png) 10% round; background-image:url(Siteimages/Parchment.jpg);"> 
+<b>Chord Organ Rouvas Academy of Singing</b><br>
+<b>I have been in the music industry in Sydney for over 30 years in the capacity of singing teacher, stage performer, singer and musician. My daughter Diana Rouvas was a finalist in the 2012 â€œThe Voiceâ€ television show and she is a testament to what can be achieved with correct vocal training. Allow me to show you her technique and give yourself the opportunity to excel as a vocalist. Skype lessons also available<br> 
+Visit rouvasacademyofsinging.com.au</b><br>
+<strong>for more information phone John:<i> 0404 044 823</i> </strong><br>
+<b>See our Facebook page </b><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/></a>
+</p></section>
+</section>
+
+
+
+
+ <section class="col-1 col-m-1 "> </section>
+</div>
+   
+    <div class="row " >
+   
+</div>
+
+  
+
+    
+    <footer>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+	<p><strong><i>Address:</i></strong><br>
+	<strong >Townsville Civic Theatre<br>
+41 Boundary Street,<br>
+Townsville
+P.O. Box 1006<br>
+Townsville 4810</strong></p>
+    </section>	
+    <section class="col-3 col-m-3 ">
+	<ul>
+    <li><strong >Phone (07) 4724 2086</strong ></li>
+<li><strong >Mobile 0402 255 182</strong ></li>
+<li><strong >Email admin@townsvillemusic.org.au</strong ></li>
+<li><strong >Website www.townsvillemusic.org.au</strong ></li>
+<li><strong >ABN: 35 039 662 787</strong ></li>
+<li><strong >Not GST Registered</strong ></li>
+</ul>
+    </section>
+    <section class="col-3 col-m-3 ">
+    <ul style="list-style:none;margin-left:50px;">
+    <li><strong>Follow Us</strong></li>
+    <li><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/ii.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/gg.png.png" style="width:30px;height:30px;"/>  </a></li>
+    <li><a href="#"><img src="SiteImages/ttt.png.png" style="width:30px;height:30px;"/>  </a></li>
+    </ul>
+     </section>
+     <section class="col-3 col-m-3 ">
+     <strong>Normal office hours <br> 
+9.30 -2.30 Monday - Wednesday<br>
+Any other time just call 0402 255 182 </strong>
+	 
+    </section>	
+   </div>
+   <div class="row " >
+   <hr class="style15">
+	<h4>Design By 007 - 2017</h4>
+	
+	</div>
+    </footer>
+    </div>
+</body>
+</html>

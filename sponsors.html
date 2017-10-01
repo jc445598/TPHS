@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link href="img.css" rel="stylesheet" type="text/css">-->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="view<title>ABC School</title>
+port" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<style>
+.mySlides {display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+ $(document).ready(function()
+{
+    $("#flip").click(function(){
+         $("#panel").slideToggle("slow");
+    });
+	$("#panel").click(function(){
+		 $("#panel").slideToggle("slow");
+		});
+});
+
+ </script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+	$("#panel1").click(function(){
+		$("#panel1").slideToggle("slow");
+		});
+});
+</script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip2").mouseover(function(){
+        $("#panel2").slideDown("slow");
+    });
+	$("#panel2").mouseout(function(){
+		$("#pane2").slideUp("slow");
+		});
+});
+</script>
+
+
+ <script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+	<header>      
+    </header>
+    <div class="row">
+    
+    <div class="nav"> 
+
+
+ <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-menu">
+					<a href="event1.html" onClick="nav_item_selected(1)">Current Events</a>
+					<a href="pastevent.html" onClick="nav_item_selected(1)">History Event</a>	
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Broad</button>
+				<div class="dropdown-menu">
+					<a href="bulletn.html" onClick="nav_item_selected(2)">Post a New one</a>
+						
+				</div>
+			</div>
+ 
+<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-menu">
+					<a href="artist_galary.html" onClick="nav_item_selected(3)">Artists</a>
+					
+				</div>
+			</div>
+
+<div class="dropdown">
+				<button class="dropbtn" id="4">Membership</button>
+				<div class="dropdown-menu">
+					<a href="member.html" onClick="nav_item_selected(4)">Join Us</a>	
+				
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-menu">
+                <a href="about_us.html" onClick="nav_item_selected(5)">Brief History</a>
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="sponsors.html" onClick="nav_item_selected(5)">Sponsors</a>
+				</div>
+			</div>
+             <a href="Feedback.html" id="6" onClick="nav_item_selected(6)">Feedback</a>
+          <a href="sign_up.html" id="7" onClick="nav_item_selected(7)">Sign-Up</a>
+</div>
+
+</div>
+
+         <div class="row " >
+          <section class="col-1 col-m-1 "> </section>
+           <section class="col-9 col-m-9 "> 
+           <p style="margin-left:0px;text-align:center;font-size:20px;color:green;border: 20px solid transparent;
+      border-radius: 15px;
+       "><strong> Sponsors </strong><br>
+       <h1>Townsville City Council</h1>
+       The Council's Partnerships and Sponsorships scheme provides vital core funding which enables us to maintain the administrative base for all our other activities, and also provides the premises which house our office space. 
+The Council also assists with the performance venues for our concerts and workshops.  </p>
+<h1>Queensland Government </h1>
+<p>The Gambling Community Benefit Fund has assisted us to obtain office equipment and sound and lighting equipment for our productions </p></section>
+         <section class="col-1 col-m-1 "> </section>
+         </div>
+         <div class="row " >
+          <section class="col-1 col-m-1 "> </section>
+           <section class="col-9 col-m-9 "> 
+          <img  src="SiteImages/TCCgcbfQN100px.png" style="width:100%"/>
+  
+   </section>
+  <section class="col-1 col-m-1 "> </section>
+  </div>
+    
+    
+    
+    
+        <!--<figure>
+  <a href="#"><img src="musos/CelticFyre800.jpg" alt="The Pulpit Rock" >
+  <figcaption>CelticFyre</figcaption></a>
+</figure>-->
+
+
+     
+ 
+<footer>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+	<p><strong><i>Address:</i></strong><br>
+	<strong >Townsville Civic Theatre<br>
+41 Boundary Street,<br>
+Townsville
+P.O. Box 1006<br>
+Townsville 4810</strong></p>
+    </section>	
+    <section class="col-3 col-m-3 ">
+	<ul>
+    <li><strong >Phone (07) 4724 2086</strong ></li>
+<li><strong >Mobile 0402 255 182</strong ></li>
+<li><strong >Email admin@townsvillemusic.org.au</strong ></li>
+<li><strong >Website www.townsvillemusic.org.au</strong ></li>
+<li><strong >ABN: 35 039 662 787</strong ></li>
+<li><strong >Not GST Registered</strong ></li>
+</ul>
+    </section>
+    <section class="col-3 col-m-3 ">
+     
+    <ul style="list-style:none;margin-left:50px;">
+    <li><strong>Follow Us</strong></li>
+    <li><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/ii.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/gg.png.png" style="width:30px;height:30px;"/>  </a></li>
+    <li><a href="#"><img src="SiteImages/ttt.png.png" style="width:30px;height:30px;"/>  </a></li>
+    </ul>
+     </section>
+     <section class="col-3 col-m-3 ">
+     <strong>Normal office hours <br> 
+9.30 -2.30 Monday - Wednesday<br>
+Any other time just call 0402 255 182 </strong>
+	 
+    </section>	
+   </div>
+   <div class="row " >
+   <hr class="style15">
+	<h4>Design By 007 - 2017</h4>
+	
+	</div>
+    </footer>
+    </div>
+</body>
+</html>

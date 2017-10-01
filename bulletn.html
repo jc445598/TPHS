@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link href="img.css" rel="stylesheet" type="text/css">-->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="view<title>ABC School</title>
+port" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<style>
+.mySlides {display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+ $(document).ready(function()
+{
+    $("#flip").click(function(){
+         $("#panel").slideToggle("slow");
+    });
+	$("#panel").click(function(){
+		 $("#panel").slideToggle("slow");
+		});
+});
+
+ </script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+	$("#panel1").click(function(){
+		$("#panel1").slideToggle("slow");
+		});
+});
+</script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip2").mouseover(function(){
+        $("#panel2").slideDown("slow");
+    });
+	$("#panel2").mouseout(function(){
+		$("#pane2").slideUp("slow");
+		});
+});
+</script>
+
+
+ <script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+	<header>      
+    </header>
+    <div class="row">
+    
+    <div class="nav"> 
+
+
+ <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-menu">
+					<a href="event1.html" onClick="nav_item_selected(1)">Current Events</a>
+					<a href="pastevent.html" onClick="nav_item_selected(1)">History Event</a>	
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Broad</button>
+				<div class="dropdown-menu">
+					<a href="bulletn.html" onClick="nav_item_selected(2)">Post a New one</a>
+						
+				</div>
+			</div>
+ 
+<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-menu">
+					<a href="artist_galary.html" onClick="nav_item_selected(3)">Artists</a>
+					
+				</div>
+			</div>
+
+<div class="dropdown">
+				<button class="dropbtn" id="4">Membership</button>
+				<div class="dropdown-menu">
+					<a href="member.html" onClick="nav_item_selected(4)">Join Us</a>	
+				
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-menu">
+                <a href="about_us.html" onClick="nav_item_selected(5)">Brief History</a>
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="sponsors.html" onClick="nav_item_selected(5)">Sponsors</a>
+				</div>
+			</div>
+             <a href="Feedback.html" id="6" onClick="nav_item_selected(6)">Feedback</a>
+          <a href="sign_up.html" id="7" onClick="nav_item_selected(7)">Sign-Up</a>
+</div>
+
+</div>
+      
+    
+    <div class="row " >
+    <section class="col-1 col-m-1 "> </section>
+ <hr class="style15">
+
+<section class="col-9 col-m-9 ">
+
+<section id="flip" style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;"><strong>Volunteer Singers / Musicians: </strong></section>
+
+
+<section id="panel"><p style="margin-left:0px;text-align:justify;font-size:20px;color:red;">
+<ul style="list-style:none;">
+<li><img src="bulletin/StJosephs.png" style="width:300px;height:100px;"/></li>
+<li>Posted 24-Mar-15</li>
+<li>Chord Organ </li>
+<li>Volunteer Singers / Musicians</li> 
+
+<li>Our Parish Priest, Fr Mick Peters, is trying to development and foster a community for our 6 PM Vigil Mass at St Josephs on the Strand. 
+I'm helping by organising an event format, where I invite our members to bring a plate for a buffet and I provide music, or friends who can sing or perform. 
+Now that we are achieving some success, we need more people who can sing or play music. 
+I'm open to any kind of singing or performing so long as it is not too controversial. My preference would be for an artist to sing a medley of old time favorites. 
+Mass starts at 6pm and finishes about 10 to 7.</li> 
+
+<li>If you would like to take part, <h5>please call Merle Trembath 0418882633 anytime</h5></li> 
+
+</ul>
+</p>
+</section>
+
+<br>
+
+
+<hr class="style15">
+    <br>
+<section id="flip1"  style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;"><strong>TCB logo CALL OUT FOR MUSOS(Family friendly Festival)</strong></section>
+
+
+<section id="panel1"><p style="margin-left:0px;text-align:justify;font-size:20px;color:red;">
+<ul style="list-style:none;">
+<li><img src="bulletin/TCBlogo160160.jpg" style="width:300px;height:100px;"/></li>
+<li>Posted 21-March-15</li>
+<li>TCB logo CALL OUT FOR MUSOS</li>
+<li>Calling all Musoâ€™s, entertainers, performers.</li> 
+
+<li>Calling all Musoâ€™s, entertainers, performers. We are looking to book performers/musicians/entertainers for a family friendly festival at the Ingham Tyto Wetlands on the 23rd of May. This inaugural annual event is a family fun day in the parklands and we are looking for appropriate acts. We are looking for a wide variety of bands and entertainers from our local and surrounding areas. </li>
+<li><b> Instructions</b></li>
+<li>Artists will need to be insured for public liability.</li>
+<li>If you are interested please email details.</li>
+<li>Examples or links to your work and a quote including travel expenses for performing at the event to the Event Stage Manager Emile Griffiths </li>
+<li><b>mutec.audio@gmail.com</b></li>
+<li><b>See our Facebook page <a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></b></li>
+
+</ul>
+</p>
+</section>
+
+<br>
+<hr class="style15"><br>
+<br>
+
+<section id="flip2" style="padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;"><strong>Music teaching</strong></section>
+
+
+<section id="panel2"><p style="margin-left:0px;text-align:justify;font-size:20px;color:red;">
+<ul style="list-style:none;">
+<li><img src="bulletin/StJosephs.png" style="width:300px;height:100px;"/></li>
+<li>Posted 09-Mar-15</li>
+<li>Chord Organ </li>
+<li>Chord Organ Music teaching by Effortless Technique </li> 
+
+<li>Are you struggling to master sections of your pieces at tempo?<br> Are you stressing that you wonâ€™t be prepared because you donâ€™t have enough time to practice? Would you like to learn efficient and effective practice skills and strategies to help you play those difficult sections with confidence and ease and to the best of your ability? </li> 
+
+<li><b>Visit us on Facebook<a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></b></li>
+
+<li><b>Email Cassandra Fixter</b><h5>mutec.audio@gmail.com</h5></li>
+
+<li> <h5>phone 0423 626 501</h5></li> 
+
+</ul>
+</p>
+</section>
+</section>
+ <section class="col-1 col-m-1 "> </section>
+</div>
+   
+    <div class="row " >
+   
+</div>
+
+  
+
+    
+    <footer>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+	<p><strong><i>Address:</i></strong><br>
+	<strong >Townsville Civic Theatre<br>
+41 Boundary Street,<br>
+Townsville
+P.O. Box 1006<br>
+Townsville 4810</strong></p>
+    </section>	
+    <section class="col-3 col-m-3 ">
+	<ul>
+    <li><strong >Phone (07) 4724 2086</strong ></li>
+<li><strong >Mobile 0402 255 182</strong ></li>
+<li><strong >Email admin@townsvillemusic.org.au</strong ></li>
+<li><strong >Website www.townsvillemusic.org.au</strong ></li>
+<li><strong >ABN: 35 039 662 787</strong ></li>
+<li><strong >Not GST Registered</strong ></li>
+</ul>
+    </section>
+    <section class="col-3 col-m-3 ">
+    <ul style="list-style:none;margin-left:50px;">
+    <li><strong>Follow Us</strong></li>
+    <li><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/ii.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/gg.png.png" style="width:30px;height:30px;"/>  </a></li>
+    <li><a href="#"><img src="SiteImages/ttt.png.png" style="width:30px;height:30px;"/>  </a></li>
+    </ul>
+     </section>
+     <section class="col-3 col-m-3 ">
+     <strong>Normal office hours <br> 
+9.30 -2.30 Monday - Wednesday<br>
+Any other time just call 0402 255 182 </strong>
+	 
+    </section>	
+   </div>
+   <div class="row " >
+   <hr class="style15">
+	<h4>Design By 007 - 2017</h4>
+	
+	</div>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<link href="img.css" rel="stylesheet" type="text/css">-->
+<link href="styles.css" rel="stylesheet" type="text/css">
+<meta name="view<title>ABC School</title>
+port" content="width=device-width, initial-scale=1.0">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<style>
+.mySlides {display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+ $(document).ready(function()
+{
+    $("#flip").click(function(){
+         $("#panel").slideToggle("slow");
+    });
+	$("#panel").click(function(){
+		 $("#panel").slideToggle("slow");
+		});
+});
+
+ </script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+	$("#panel1").click(function(){
+		$("#panel1").slideToggle("slow");
+		});
+});
+</script>
+ <script>
+$(document).ready(function()
+{
+    $("#flip2").mouseover(function(){
+        $("#panel2").slideDown("slow");
+    });
+	$("#panel2").mouseout(function(){
+		$("#pane2").slideUp("slow");
+		});
+});
+</script>
+
+
+ <script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+</script>
+
+</head>
+
+<body onload="run_first()"> 
+	<div id="wrapper">
+	<header>      
+    </header>
+    <div class="row">
+    
+    <div class="nav"> 
+
+
+ <a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+
+
+ <div class="dropdown">
+
+<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-menu">
+					<a href="event1.html" onClick="nav_item_selected(1)">Current Events</a>
+					<a href="pastevent.html" onClick="nav_item_selected(1)">History Event</a>	
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Broad</button>
+				<div class="dropdown-menu">
+					<a href="bulletn.html" onClick="nav_item_selected(2)">Post a New one</a>
+						
+				</div>
+			</div>
+ 
+<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-menu">
+					<a href="artist_galary.html" onClick="nav_item_selected(3)">Artists</a>
+					
+				</div>
+			</div>
+
+<div class="dropdown">
+				<button class="dropbtn" id="4">Membership</button>
+				<div class="dropdown-menu">
+					<a href="member.html" onClick="nav_item_selected(4)">Join Us</a>	
+				
+				</div>
+			</div>
+<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-menu">
+                <a href="about_us.html" onClick="nav_item_selected(5)">Brief History</a>
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="sponsors.html" onClick="nav_item_selected(5)">Sponsors</a>
+				</div>
+			</div>
+             <a href="Feedback.html" id="6" onClick="nav_item_selected(6)">Feedback</a>
+          <a href="sign_up.html" id="7" onClick="nav_item_selected(7)">Sign-Up</a>
+</div>
+
+</div>
+ <div class="row " >
+ <section class="col-3 col-m-3 ">
+</section>
+  <section class="col-6 col-m-6 ">
+  <img src="events/SwingSerenadeFB.jpg" style="width:500px;height:707px;"/>
+  <hr class="style15"><br>
+ </section> 
+<section class="col-3 col-m-3 ">
+  <img src="events/TShop300web.jpg" style="width:280px;height:55px;"/>
+  <ul>
+    <li><strong >Time: </strong > 8pm SAturday 30th November</li>
+<li><strong >Adults:</strong > $40</li>
+<li><strong >Cocession:</strong >$35</li>
+<li><strong >MC member:</strong >$30</li>
+</ul>
+</section>
+    </div><div class="row " >
+ <section class="col-3 col-m-3 ">
+</section>
+  <section class="col-6 col-m-6 ">
+  <img src="events/Latin-Fiesta-W.jpg" style="width:300px;height:318px;"/>
+  <hr class="style15"><br>
+ </section> 
+<section class="col-3 col-m-3 ">
+  <img src="events/TShop300web.jpg" style="width:280px;height:55px;"/>
+  <ul>
+    <li><strong >Time: </strong > 8pm SAturday 30th November</li>
+<li><strong >Adults:</strong > $40</li>
+<li><img src="SiteImages/CIVIC C2 LOGO.jpg" style="width:280px;height:100px;"/></li>
+</ul>
+</section>
+    </div>
+   <div class="row " >
+   <section class="col-3 col-m-3 ">
+</section>
+  <section class="col-6 col-m-6 ">
+  <p style="margin-left:0px;text-align:justify;font-size:20px;color:green;border: 20px solid transparent;
+    border-radius: 15px;
+	 border-image: url(Siteimages/PNG-HD.png) 10% round; background-image:url(Siteimages/Parchment.jpg);">
+  
+<strong>Event Name:</strong>&nbsp&nbsp <strong>SUNDAY VARIETY CONCERT</strong><br>
+ <strong>Presented By:</strong>&nbsp&nbsp Friends of the Theatre <br>
+ <strong>venue:</strong>&nbsp&nbsp 2pm Sunday 25 June at Pimlico Performing Arts Centre Fulham Road <br>
+<strong>Enquiries :</strong>&nbsp&nbsp please phone 4723 7879 
+</p><br>
+<hr class="style15"><br>
+<p style="margin-left:0px;text-align:justify;font-size:20px;color:green;border: 20px solid transparent;
+    border-radius: 15px;
+	 border-image: url(Siteimages/PNG-HD.png) 10% round; background-image:url(Siteimages/Parchment.jpg);">
+  
+
+<strong>Event Name:</strong>&nbsp&nbsp <strong>Townsville Guitar Orchestra</strong><br>
+ <strong>venue:</strong>&nbsp&nbsp 2pm Sunday 25 July at the Carlton Theatre (Carlyle Gardens) <br>
+<strong>Enquiries :</strong>&nbsp&nbsp please phone 0402 255 182 
+ 
+</p>
+
+  </section>   
+   </div>
+   <div class="row">
+   <section class="col-3 col-m-3 ">
+</section>
+  <section class="col-6 col-m-6 ">
+<a href="pastevent.html"><button class="button1" style="color:black;"><b>Past-Events</b></button></a>
+</section>
+<section class="col-3 col-m-3 ">
+</section>
+   </div>
+    <footer>
+    <div class="row " >
+    <section class="col-3 col-m-3 ">
+	<p><strong><i>Address:</i></strong><br>
+	<strong >Townsville Civic Theatre<br>
+41 Boundary Street,<br>
+Townsville
+P.O. Box 1006<br>
+Townsville 4810</strong></p>
+    </section>	
+    <section class="col-3 col-m-3 ">
+	<ul>
+    <li><strong >Phone (07) 4724 2086</strong ></li>
+<li><strong >Mobile 0402 255 182</strong ></li>
+<li><strong >Email admin@townsvillemusic.org.au</strong ></li>
+<li><strong >Website www.townsvillemusic.org.au</strong ></li>
+<li><strong >ABN: 35 039 662 787</strong ></li>
+<li><strong >Not GST Registered</strong ></li>
+</ul>
+    </section>
+    <section class="col-3 col-m-3 ">
+    <ul style="list-style:none;margin-left:50px;">
+    <li><strong>Follow Us</strong></li>
+    <li><a href="#"><img src="SiteImages/ff.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/ii.png.png" style="width:30px;height:30px;"/> </a></li>
+    <li><a href="#"><img src="SiteImages/gg.png.png" style="width:30px;height:30px;"/>  </a></li>
+    <li><a href="#"><img src="SiteImages/ttt.png.png" style="width:30px;height:30px;"/>  </a></li>
+    </ul>
+     </section>
+     <section class="col-3 col-m-3 ">
+     <strong>Normal office hours <br> 
+9.30 -2.30 Monday - Wednesday<br>
+Any other time just call 0402 255 182 </strong>
+	 
+    </section>	
+   </div>
+   <div class="row " >
+   <hr class="style15">
+	<h4>Design By 007 - 2017</h4>
+	
+	</div>
+    </footer>
+    </div>
+</body>
+</html>
